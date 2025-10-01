@@ -3,7 +3,6 @@ import { defineConfig, fontProviders } from 'astro/config'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel'
-import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,13 +12,10 @@ export default defineConfig({
   experimental: {
     fonts: [
       {
-        cssVariable: '--font-inter',
-        name: 'Inter',
+        cssVariable: '--font-sofia-sans',
+        name: 'Sofia Sans',
         provider: fontProviders.google()
       }
     ]
-  },
-  vite: {
-    plugins: [tailwindcss()]
   }
 })

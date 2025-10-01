@@ -1,7 +1,22 @@
-<nav class="flex items-center justify-between w-full">
-  <a href="/" class="font-semibold">Marcos</a>
-  <ul class="flex items-center gap-5">
-    <a href="#">Projects</a>
-    <a href="#">Other</a>
+<nav class="navbar">
+  <a href="/">Marcos</a>
+  <ul class="navbar-links">
+    <a href="/garden">Garden</a>
+    <a href="/guestbook">Guestbook</a>
+    <a href="/media">Media</a>
   </ul>
 </nav>
+
+<style>
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+</style>

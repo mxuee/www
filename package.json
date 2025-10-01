@@ -14,11 +14,9 @@
     "@astrojs/preact": "^4.1.1",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/vercel": "^8.2.8",
-    "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.14.1",
     "astro-capo": "^0.0.1",
-    "preact": "^10.27.2",
-    "tailwindcss": "^4.1.13"
+    "preact": "^10.27.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4"

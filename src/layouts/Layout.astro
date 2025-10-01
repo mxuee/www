@@ -2,7 +2,7 @@
 import Footer from '@components/Footer.astro'
 import Head from '@components/Head.astro'
 import Navbar from '@components/Navbar.astro'
-import '@styles/global.css'
+import '@styles/reset.css'
 
 interface Props {
   title: string
@@ -13,11 +13,39 @@ const { title } = Astro.props
 
 <html lang="en">
   <Head {title} />
-  <body class="font-inter">
-    <div class="m-auto max-w-3xl w-[90%] my-5 space-y-8">
+  <body>
+    <div class="container">
       <Navbar />
-      <slot />
-      <Footer />
+      <main>
+        <slot />
+      </main>
     </div>
+    <Footer />
   </body>
 </html>
+
+<style is:global>
+  :root {
+    --max-width: 768px;
+  }
+
+  body {
+    font-family: var(--font-sofia-sans);
+    font-size: clamp(1rem, 20px, 2rem);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+</style>
