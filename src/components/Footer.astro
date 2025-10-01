@@ -1,12 +1,36 @@
-<footer class="footer">
+---
+import { MailPlus } from 'lucide-preact'
+---
+
+<footer>
   <div class="footer-content">
-    <span>Test</span>
-    <span>Test</span>
+    <ul>
+      <a href="/">Home</a>
+      <a href="/guestbook">Guestbook</a>
+      <a href="/media">Media</a>
+    </ul>
+    <ul>
+      <a href="#">Github</a>
+      <a href="#">Twitch</a>
+    </ul>
+    <div class="footer-contact">
+      <div>
+        <h4>Wanna create software toguether?</h4>
+        <p>
+          Send me a e-mail or join my discord to contact me and share your
+          ideas!
+        </p>
+      </div>
+      <a href="mailto:mcorrochanoa@outlook.com">
+        mcorrochanoa@outlook.com
+        <MailPlus />
+      </a>
+    </div>
   </div>
 </footer>
 
 <style>
-  .footer {
+  footer {
     border-top: 1px solid gainsboro;
     width: 100%;
     padding-top: 40px;
@@ -14,9 +38,38 @@
 
   .footer-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     max-width: var(--max-width);
     margin: auto;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: gainsboro;
+    }
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 4px 14px 4px 14px;
+      text-decoration: none;
+      color: dimgray;
+    }
   }
 </style>
