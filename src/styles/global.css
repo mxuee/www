@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sofia-sans: var(--font-sofia-sans);
+  --color-dimegrey: #464646;
+}
+
+@layer base {
+  body {
+    font-size: 20px;
+  }
+}
