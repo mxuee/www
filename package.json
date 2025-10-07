@@ -11,6 +11,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
+    "@astrojs/db": "^0.18.0",
     "@astrojs/preact": "^4.1.1",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/vercel": "^8.2.8",
