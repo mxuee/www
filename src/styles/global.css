@@ -9,4 +9,12 @@
   body {
     font-size: 20px;
   }
+
+  button {
+    cursor: pointer;
+  }
+
+  [data-icon] {
+    font-size: 1.5rem;
+  }
 }

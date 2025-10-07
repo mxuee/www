@@ -1,10 +1,21 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import { db, desc, Guestbook as GuestbookDB } from 'astro:db'
+
+export const prerender = false
+const notes = await db
+  .select()
+  .from(GuestbookDB)
+  .orderBy(desc(GuestbookDB.date))
+  .all()
 ---
 
 <Layout title="Guestbook - Leave a note for the history!">
-  <div class="flex flex-col">
+  <div class="flex flex-col max-sm:text-center">
     <h3 class="text-4xl font-semibold">Guestbook</h3>
-    <p>21 people have left messages!</p>
+    <p>{notes.length} people have left messages!</p>
   </div>
+  <ul class="grid grid-cols-2 gap-6 max-sm:grid-cols-1">
+    <!-- Guestbook Entries -->
+  </ul>
 </Layout>
