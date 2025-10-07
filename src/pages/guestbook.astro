@@ -1,5 +1,6 @@
 ---
 import GuestCard from '@components/ui/GuestCard.astro'
+import GuestForm from '@components/ui/GuestForm.astro'
 import Layout from '@layouts/Layout.astro'
 import { db, desc, Guestbook as GuestbookDB } from 'astro:db'
 
@@ -17,6 +18,7 @@ const notes = await db
     <p>{notes.length} people have left messages!</p>
   </div>
   <ul class="grid grid-cols-2 gap-10 max-sm:grid-cols-1">
+    <GuestForm />
     {notes.map((note) => <GuestCard {note} />)}
   </ul>
 </Layout>

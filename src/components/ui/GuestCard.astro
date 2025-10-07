@@ -10,7 +10,7 @@ const { note } = Astro.props
 
 <div class=`w-full h-[300px] bg-[url('/images/note.webp')] bg-cover`>
   <div class="flex flex-col justify-between h-full z-10 p-10">
-    <p>{note.text}</p>
+    <p class="wrap-anywhere">{note.text}</p>
     <div class="flex flex-col w-full text-end">
       <p class="font-bold">{note.name}</p>
       <p class="text-[16px]">{new Date(note.date).toLocaleDateString()}</p>
